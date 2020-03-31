@@ -4,17 +4,20 @@
 
 console.log("CIAO");
 
-
-var a = $(́".fa-bars");
+var a = $(".fa-bars");
 var stateHamburgerMenu = "hidden";
+
 a.click(
   function () {
-    if (stateHamburgerMenu === hidden) {
+    if (stateHamburgerMenu === "hidden") {
       $('.hamburger-menu').fadeIn();
       stateHamburgerMenu = "visible";
-    } else {
-      $('.hamburger-menu').fadeOut();
-      stateHamburgerMenu = "hidden";
     }
-  }
+    $(".fa-times").click(
+      function(){
+        $('.hamburger-menu').fadeOut();
+          stateHamburgerMenu = "hidden";
+      }
+      )
+    }
 )
